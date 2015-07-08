@@ -155,6 +155,14 @@ nock('http://example.com')
   .reply({results: [{id: 'pgte'}]});
 ```
 
+To allow any query strings:
+
+```js
+nock('http://example.com')
+  .get('/users')
+  .query(true)
+  .reply({results: [{id: 'pgte'}]});
+```
 
 ## Specifying replies
 
